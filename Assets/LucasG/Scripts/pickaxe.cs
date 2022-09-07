@@ -29,11 +29,11 @@ public class pickaxe : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("hit an obstacle");
+            Debug.Log("pickaxe hit an obstacle");
             Destroy(collision.gameObject);
         }
     }
