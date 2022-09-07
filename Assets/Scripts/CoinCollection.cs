@@ -18,6 +18,7 @@ public class CoinCollection : MonoBehaviour
         if(collision.gameObject.CompareTag("Coin"))
         {
             coin++;
+            PlayerLucasG.Instance.TakeDamage();
             TMPtext.text = coin.ToString();
             Destroy(collision.gameObject);
         }
