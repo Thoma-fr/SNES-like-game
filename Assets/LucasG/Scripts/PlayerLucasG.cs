@@ -11,7 +11,7 @@ public class PlayerLucasG : MonoBehaviour
     public bool canDestroy = false;
     private GameObject objectToDestroy;
 
-    private int hp = 4;
+    public int hp = 4;
 
     private float coin;
     [SerializeField]
