@@ -2,7 +2,7 @@
 
 Shader "SOTN Custom/Scanlines" {
     Properties{
-        _Color("Color", Color) = (0,0,0,1)
+        _Color("Color", Color) = (0,0,0,0.5)
         _LinesSize("LinesSize", Range(1,10)) = 1
     }
         SubShader{
