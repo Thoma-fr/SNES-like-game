@@ -6,9 +6,12 @@ public class pickaxe : MonoBehaviour
 {
     private Animator anim;
     private Collider2D collider2d;
-
+    private GameObject parent;
+    private Vector2 offSet = new Vector2(1,0.3f);
+    
     private void Start()
     {
+        parent = transform.parent.gameObject;
         anim = GetComponent<Animator>();
         collider2d = GetComponent<Collider2D>();
         collider2d.enabled = false;
@@ -27,6 +30,8 @@ public class pickaxe : MonoBehaviour
             anim.SetBool("colliderIsActive", false);
             collider2d.enabled = false;
         }
+
+        transform.position = parent.transform.position + (Vector3)offSet;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
