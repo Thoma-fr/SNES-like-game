@@ -9,24 +9,23 @@ public class PlayerMovement : MonoBehaviour
     public float _force = 100;
     public float _maxSpeed = 20;
     private bool _action = false;
+    private Vector3 target = Vector3.zero;
+    private float step;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow) && !_action)
         {
             _action = true;
-            Debug.Log("LEFT");
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && _action)
+        else if (Input.GetKeyDown(KeyCode.Keypad6) && _action)
         {
             _rb.AddForce(new Vector2(_force, 0));
             _action = false;
-            Debug.Log("RIGHT");
         }
-        else if ( (Input.GetKeyDown(KeyCode.LeftArrow) && _action) || Input.GetKeyDown(KeyCode.RightArrow) && !_action)
+        else if ( (Input.GetKeyDown(KeyCode.LeftArrow) && _action) || Input.GetKeyDown(KeyCode.Keypad6) && !_action)
         {
             _action = false;
-            Debug.Log("WRONG");
         }
 
         if (_rb.velocity.x > _maxSpeed)
@@ -35,5 +34,20 @@ public class PlayerMovement : MonoBehaviour
         }
 
         _speed = _rb.velocity.x;
+
+        if (target != Vector3.zero)
+        {
+            step = _speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, target, step);
+            if (Vector3.Distance(transform.position,target) <= 1)
+            {
+                target = Vector3.zero;
+            }
+        }
+    }
+
+    public void GoTo(Vector3 position)
+    {
+        target = position;
     }
 }
