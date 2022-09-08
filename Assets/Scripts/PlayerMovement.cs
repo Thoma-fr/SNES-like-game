@@ -130,6 +130,18 @@ public class PlayerMovement : MonoBehaviour
         target = position;
     }
 
+    public void hold_light_p1()
+    {
+        AddLight();
+        RemoveLight();
+    }
+
+    public void hold_light_p2()
+    {
+        AddLight();
+        RemoveLight();
+    }
+
     public void move_p1()
     {
         _action = true;
