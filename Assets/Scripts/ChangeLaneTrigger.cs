@@ -58,29 +58,26 @@ public class ChangeLaneTrigger : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void UP_P1()
     {
-        if (!_changeLane)
-            return;
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            _p1_up = true;
-            _p1_down = false;
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            _p1_up = false;
-            _p1_down = true;
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad8))
-        {
-            _p2_up = true;
-            _p2_down = false;
-        }
-        else if (Input.GetKeyDown(KeyCode.Keypad2))
-        {
-            _p2_up = false;
-            _p2_down = true;
-        }
+        _p1_up = true;
+        _p1_down = false;
+    }
+    public void DOWN_P1()
+    {
+        _p1_up = false;
+        _p1_down = true;
+    }
+
+    public void UP_P2()
+    {
+        _p2_up = true;
+        _p2_down = false;
+    }
+
+    public void DOWN_P2()
+    {
+        _p2_up = false;
+        _p2_down = true;
     }
 }
