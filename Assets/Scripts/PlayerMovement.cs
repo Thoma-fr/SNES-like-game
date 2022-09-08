@@ -23,12 +23,16 @@ public class PlayerMovement : MonoBehaviour
     public float _vignette_speed = 0.001f;
     public float _vignette_max = 0.25f;
     private Vignette vignette;
-    public bool _light = false;
-    public int _nb_light = 0;
+    public float time_light = 0.1f;
+    private float _time_lightP1 = 1f;
+    private float _time_lightP2 = 1f;
+    private float _light_P1 = 0f;
+    private float _light_P2 = 0f;
+    private float _lightdown_P1 = 0f;
+    private float _lightdown_P2 = 0f;
 
     private void Start()
     {
-
         if (volume.profile.TryGet<Vignette>(out vignette))
         {
             vignette.intensity.overrideState = true;
@@ -54,48 +58,37 @@ public class PlayerMovement : MonoBehaviour
             _rb.velocity = new Vector2(_maxSpeed, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        _time_lightP1 -= Time.deltaTime;
+        if ( _time_lightP1 <= 0 )
         {
-            AddLight();
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad5))
-        {
-            AddLight();
-        }
-        
-        if(Input.GetKeyUp(KeyCode.Space))
-        {
-            RemoveLight();
-        }
-        if (Input.GetKeyUp(KeyCode.Keypad5))
-        {
-            RemoveLight();
-        }
+            _light_P1 = 0;
 
-        if (_nb_light == 0)
-        {
-            _light = false;
-        }
-
-        if (_light)
-        {
-            if (vignette.intensity.value > (_vignette_max * 2 - _vignette_max * _nb_light))
-            {
-                vignette.intensity.value -= _vignette_speed / 1000;
-            }
-
-            if (vignette.intensity.value < (_vignette_max * 2 - _vignette_max * _nb_light))
+            if (_lightdown_P1 < _vignette_max)
             {
                 vignette.intensity.value += _vignette_speed / 1000;
+                _lightdown_P1 += _vignette_speed / 1000;
+                _light_P1 -= _vignette_speed / 1000;
+
+                if (vignette.intensity.value > _vignette_max * 2)
+                {
+                    vignette.intensity.value = _vignette_max * 2;
+                }
             }
         }
-        else if (vignette.intensity.value < _vignette_max * 2)
-        {
-            vignette.intensity.value += _vignette_speed / 1000;
 
-            if (vignette.intensity.value > _vignette_max * 2 )
+        _time_lightP2 -= Time.deltaTime;
+        if (_time_lightP2 <= 0 && _light_P2 > 0)
+        {
+            if (_lightdown_P2 < _vignette_max)
             {
-                vignette.intensity.value = _vignette_max * 2;
+                vignette.intensity.value += _vignette_speed / 1000;
+                _lightdown_P2 += _vignette_speed / 1000;
+                _light_P2 -= _vignette_speed / 1000;
+
+                if (vignette.intensity.value > _vignette_max * 2)
+                {
+                    vignette.intensity.value = _vignette_max * 2;
+                }
             }
         }
 
@@ -114,17 +107,6 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    public void AddLight()
-    {
-        _light = true;
-        _nb_light++;
-    }
-
-    public void RemoveLight()
-    {
-        _nb_light--;
-    }
-
     public void GoTo(Vector3 position)
     {
         target = position;
@@ -132,14 +114,24 @@ public class PlayerMovement : MonoBehaviour
 
     public void hold_light_p1()
     {
-        AddLight();
-        RemoveLight();
+        if (_light_P1 < _vignette_max)
+        {
+            vignette.intensity.value -= _vignette_speed / 1000;
+            _light_P1 += _vignette_speed / 1000;
+            _lightdown_P1 -= _vignette_speed / 1000;
+        }
+        _time_lightP1 = time_light;
     }
 
     public void hold_light_p2()
     {
-        AddLight();
-        RemoveLight();
+        if (_light_P2 < _vignette_max)
+        {
+            vignette.intensity.value -= _vignette_speed / 1000;
+            _light_P2 += _vignette_speed / 1000;
+            _lightdown_P2 -= _vignette_speed / 1000;
+        }
+        _time_lightP2 = time_light;
     }
 
     public void move_p1()
