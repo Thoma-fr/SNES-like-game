@@ -119,39 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-<<<<<<< HEAD
-      spriteID: 2ed4f4a725ca3904fb4e1f2e866d1e8e
-      internalID: -861272413
-=======
-      spriteID: 7209d61bfc7bedf469c64c175b48e810
-      internalID: -800832833
->>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pioche_animation-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 0
-        width: 60
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-<<<<<<< HEAD
-      spriteID: d4475db4b2eb8f342b427000d0992c64
-      internalID: -1639991355
-=======
-      spriteID: a1ccb39bda491b24bbfdf9b76f10a44f
-      internalID: 440331230
->>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
+      spriteID: b3ba6dafecafea6f0800000000000000
+      internalID: -671323527553045701
       vertices: []
       indices: 
       edges: []
@@ -159,7 +128,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -167,13 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<< HEAD
-      pioche_animation-Sheet_0: -861272413
-      pioche_animation-Sheet_1: -1639991355
-=======
-      pioche_animation-Sheet_0: -800832833
-      pioche_animation-Sheet_1: 440331230
->>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
+      pioche_animation-Sheet_0: -671323527553045701
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
