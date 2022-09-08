@@ -2767,6 +2767,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5654999222389303514, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
   m_PrefabInstance: {fileID: 5654999222424993837}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624836991 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 509569275, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+  m_PrefabInstance: {fileID: 5654999222424993837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624836989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8017ab0107195349a792e5b77cb7c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1711586972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4160,6 +4171,34 @@ PrefabInstance:
     - target: {fileID: 5654999222389303514, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119107468166997895, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119107468166997895, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119107468166997895, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1624836991}
+    - target: {fileID: 7119107468166997895, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119107468166997895, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: move_p2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119107468166997895, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119107468166997895, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1051732816, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
