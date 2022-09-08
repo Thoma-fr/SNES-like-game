@@ -21,9 +21,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Vignette")]
     public Volume volume;
     public float _vignette_speed = 0.001f;
-    public float _vignette_max = 0.5f;
+    public float _vignette_max = 0.25f;
     private Vignette vignette;
-    private bool _light = false;
+    public bool _light = false;
+    public int _nb_light = 0;
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         if (volume.profile.TryGet<Vignette>(out vignette))
         {
             vignette.intensity.overrideState = true;
+            vignette.active = true;
         }
     }
 
@@ -46,36 +48,42 @@ public class PlayerMovement : MonoBehaviour
             _rb.AddForce(new Vector2(_force, 0));
             _action = false;
         }
-        else if ( (Input.GetKeyDown(KeyCode.LeftArrow) && _action) || Input.GetKeyDown(KeyCode.Keypad6) && !_action)
-        {
-            _action = false;
-        }
 
         if (_rb.velocity.x > _maxSpeed)
         {
             _rb.velocity = new Vector2(_maxSpeed, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Keypad5))
         {
             _light = true;
+            _nb_light++;
         }
-        else if(Input.GetKeyUp(KeyCode.Space))
+        
+        if(Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Keypad5))
+        {
+            _nb_light--;
+        }
+
+        if (_nb_light == 0)
         {
             _light = false;
         }
 
         if (_light)
         {
-            Debug.Log("LIGHT ON");
-            vignette.intensity.value -= _vignette_speed / 1000;
-        }else if (vignette.intensity.value < _vignette_max)
-        {
-            Debug.Log("LIGHT OFF");
-            vignette.intensity.value += _vignette_speed / 1000;
-            if (vignette.intensity.value > _vignette_max)
+            if (vignette.intensity.value > _vignette_max * _nb_light)
             {
-                vignette.intensity.value = _vignette_max;
+                vignette.intensity.value -= _vignette_speed / 1000;
+            }
+        }
+        else if (vignette.intensity.value < _vignette_max)
+        {
+            vignette.intensity.value += _vignette_speed / 1000;
+
+            if (vignette.intensity.value > _vignette_max )
+            {
+                vignette.intensity.value = _vignette_max ;
             }
         }
 
@@ -91,7 +99,6 @@ public class PlayerMovement : MonoBehaviour
                 target = Vector3.zero;
             }
         }
-
         
     }
 
@@ -99,8 +106,18 @@ public class PlayerMovement : MonoBehaviour
     {
         target = position;
     }
-    public void move()
+
+    public void move_p1()
     {
-        _rb.AddForce(new Vector2(_force, 0));
+        _action = true;
+    }
+
+    public void move_p2()
+    {
+        if (_action)
+        {
+            _rb.AddForce(new Vector2(_force, 0));
+            _action = false;
+        }
     }
 }
