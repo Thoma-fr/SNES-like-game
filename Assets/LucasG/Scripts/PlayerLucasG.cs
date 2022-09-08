@@ -8,15 +8,18 @@ public class PlayerLucasG : MonoBehaviour
 {
     public static PlayerLucasG Instance { get; private set; }
 
-    public bool canDestroy = false;
-    private GameObject objectToDestroy;
-
     public int hp = 4;
 
     private float coin;
     [SerializeField]
     private GameObject coinText;
     private TextMeshProUGUI TMPtext;
+    public bool canDestroy = false;
+    private GameObject objectToDestroy;
+    private bool isDamaged = false;
+    private Animator animator;
+
+    private float nbOfHealPresses;
 
     private void Awake()
     {
@@ -26,6 +29,7 @@ public class PlayerLucasG : MonoBehaviour
     private void Start()
     {
         TMPtext = coinText.GetComponent<TextMeshProUGUI>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -43,9 +47,28 @@ public class PlayerLucasG : MonoBehaviour
             }
         }
 
+        switch (hp)
+        {
+            case > 2:
+                isDamaged = false;
+                break;
+            case <=2:
+                isDamaged = true;
+                break;
+        }
+
         if (hp == 0)
         {
-            SceneManager.LoadScene("LucasGScene");
+            SceneManager.LoadScene("LucasScene");
+        }
+
+        if (isDamaged)
+        {
+            animator.SetBool("isDamaged", true);
+        }
+        else
+        {
+            animator.SetBool("isDamaged", false);
         }
     }
 
@@ -60,6 +83,16 @@ public class PlayerLucasG : MonoBehaviour
     {
         hp--;
         Debug.Log(hp);
+    }
+
+    public void Heal()
+    {
+        nbOfHealPresses++;
+        if (nbOfHealPresses == 5)
+        {
+            hp++;
+            nbOfHealPresses = 0;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
