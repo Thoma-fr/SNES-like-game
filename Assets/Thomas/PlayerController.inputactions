@@ -92,7 +92,7 @@
                     "id": "56a82db1-9837-43d7-b396-e5b3fea6963d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Hold",
+                    "interactions": "Hold(duration=1.401298E-45,pressPoint=0.5)",
                     "initialStateCheck": false
                 },
                 {
@@ -380,7 +380,18 @@
                 {
                     "name": "",
                     "id": "82605435-dc4e-479b-8f92-e60e94e6e151",
-                    "path": "<HID::USB gamepad           >/button4",
+                    "path": "<HID::USB Gamepad >/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HoldLightP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "59be3103-4aee-473f-9f72-4cb2d1f29717",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
