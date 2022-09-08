@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Obstacle
   - Coin
+  - ObstacleDestroyTrigger
+  - GoldenNugget
   layers:
   - Default
   - TransparentFX

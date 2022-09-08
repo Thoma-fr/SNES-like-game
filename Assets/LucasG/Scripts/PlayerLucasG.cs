@@ -9,17 +9,20 @@ public class PlayerLucasG : MonoBehaviour
     public static PlayerLucasG Instance { get; private set; }
 
     public int hp = 4;
+    public bool canDestroy = false;
+    public GameObject collisionWarning;
 
     private float coin;
+    private float nbOfHealPresses;
+    private bool canHeal = false;
+    private bool isDamaged = false;
     [SerializeField]
     private GameObject coinText;
     private TextMeshProUGUI TMPtext;
-    public bool canDestroy = false;
+   
     private GameObject objectToDestroy;
-    private bool isDamaged = false;
     private Animator animator;
-
-    private float nbOfHealPresses;
+    
 
     private void Awake()
     {
@@ -30,6 +33,7 @@ public class PlayerLucasG : MonoBehaviour
     {
         TMPtext = coinText.GetComponent<TextMeshProUGUI>();
         animator = GetComponent<Animator>();
+        collisionWarning.SetActive(false);
     }
 
     private void Update()
@@ -40,8 +44,7 @@ public class PlayerLucasG : MonoBehaviour
             {
                 if (objectToDestroy.CompareTag("Coin"))
                 {
-                    coin++;
-                    TMPtext.text = coin.ToString();
+                    AddCoin();
                 }
                 Destroy(objectToDestroy);
             }
@@ -51,8 +54,10 @@ public class PlayerLucasG : MonoBehaviour
         {
             case > 2:
                 isDamaged = false;
+                canHeal = false;
                 break;
             case <=2:
+                canHeal = true;
                 isDamaged = true;
                 break;
         }
@@ -79,6 +84,12 @@ public class PlayerLucasG : MonoBehaviour
 
     }
 
+    public void AddCoin()
+    {
+        coin++;
+        TMPtext.text = coin.ToString();
+    }
+
     public void TakeDamage()
     {
         hp--;
@@ -87,11 +98,14 @@ public class PlayerLucasG : MonoBehaviour
 
     public void Heal()
     {
-        nbOfHealPresses++;
-        if (nbOfHealPresses == 5)
+        if (canHeal)
         {
-            hp++;
-            nbOfHealPresses = 0;
+            nbOfHealPresses++;
+            if (nbOfHealPresses == 7)
+            {
+                hp++;
+                nbOfHealPresses = 0;
+            }
         }
     }
 

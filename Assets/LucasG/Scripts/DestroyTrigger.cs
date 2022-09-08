@@ -12,6 +12,7 @@ public class DestroyTrigger : MonoBehaviour
             Debug.Log("DestroyTriggerEntered");
             PlayerLucasG.Instance.AssignObstacleToDestroy(transform.parent.gameObject);
             PlayerLucasG.Instance.canDestroy = true;
+            PlayerLucasG.Instance.collisionWarning.SetActive(true);
         }
     }
 
@@ -21,6 +22,7 @@ public class DestroyTrigger : MonoBehaviour
         {
             Debug.Log("DestroyTriggerLeft");
             PlayerLucasG.Instance.canDestroy = false;
+            PlayerLucasG.Instance.collisionWarning.SetActive(false);
         }
     }
 }
