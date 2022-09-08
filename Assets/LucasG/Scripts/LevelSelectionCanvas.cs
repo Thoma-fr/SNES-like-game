@@ -1,22 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using TMPro;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering;
 
-public class StartMenuManager : MonoBehaviour
+public class LevelSelectionCanvas : MonoBehaviour
 {
-    public GameObject objectsToAppear;
-    public GameObject pressStart;
-    public string sceneToLoad;
-    public GameObject pepite;
-
-    private bool shouldKeepBliking = true;
-    private TextMeshProUGUI text;
-    private SpriteRenderer spriteRenderer;
-
     public GameObject globalVolume;
     public GameObject scanLine;
     private Volume volume;
@@ -26,43 +15,28 @@ public class StartMenuManager : MonoBehaviour
 
     private bool FXSwitch = true;
 
+    public string level1SceneName;
+    public string level2SceneName;
+    public string level3SceneName;
+
     private void Start()
     {
         volume = globalVolume.GetComponent<Volume>();
-        spriteRenderer = pepite.GetComponent<SpriteRenderer>();
-        text = pressStart.GetComponent<TextMeshProUGUI>();
-        objectsToAppear.SetActive(false);
-        StartCoroutine("MakeTextAppear");
     }
 
-    private void Update()
+    public void LoadLevel1()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            SceneManager.LoadScene(sceneToLoad);
-        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene(level1SceneName);
     }
 
-    private IEnumerator MakeTextAppear()
+    public void LoadLevel2()
     {
-        yield return new WaitForSeconds(3.6f);
-        objectsToAppear.SetActive(true);
-        StartCoroutine("MakeTextBlink");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(level2SceneName);
     }
 
-    private IEnumerator MakeTextBlink()
+    public void LoadLevel3()
     {
-        yield return new WaitForSeconds(0.7f);
-        text.color = new Vector4(255,255,255,0);
-        spriteRenderer.flipX = true;
-        yield return new WaitForSeconds(0.7f);
-        text.color = new Vector4(255, 255, 255, 255);
-        spriteRenderer.flipX = false;
-
-        if (shouldKeepBliking)
-        {
-            StartCoroutine("MakeTextBlink");
-        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene(level3SceneName);
     }
 
     public void ToggleFX()

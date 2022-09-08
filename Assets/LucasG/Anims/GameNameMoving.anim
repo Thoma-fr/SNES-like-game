@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TitleScreenMoving
+  m_Name: GameNameMoving
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,45 +22,26 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -246
-        inSlope: 81.91376
-        outSlope: 81.91376
+        value: -170.6
+        inSlope: 56.56896
+        outSlope: 56.56896
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.3292622
+        outWeight: 0.42990717
       - serializedVersion: 3
-        time: 2.7333333
+        time: 2.65
         value: 47.7
-        inSlope: 93.31964
-        outSlope: 93.31964
+        inSlope: 83.31894
+        outSlope: 83.31894
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.22101383
+        inWeight: 0.4220022
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: 
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.000030518
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
     path: 
     classID: 224
     script: {fileID: 0}
@@ -79,20 +60,13 @@ AnimationClip:
       typeID: 224
       customType: 28
       isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 0
-      attribute: 1460864421
-      script: {fileID: 0}
-      typeID: 224
-      customType: 28
-      isPPtrCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.7333333
+    m_StopTime: 2.65
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -113,45 +87,26 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -246
-        inSlope: 81.91376
-        outSlope: 81.91376
+        value: -170.6
+        inSlope: 56.56896
+        outSlope: 56.56896
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.3292622
+        outWeight: 0.42990717
       - serializedVersion: 3
-        time: 2.7333333
+        time: 2.65
         value: 47.7
-        inSlope: 93.31964
-        outSlope: 93.31964
+        inSlope: 83.31894
+        outSlope: 83.31894
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.22101383
+        inWeight: 0.4220022
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: 
-    classID: 224
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0.000030518
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_AnchoredPosition.x
     path: 
     classID: 224
     script: {fileID: 0}
