@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
@@ -30,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     private float _light_P2 = 0f;
     private float _lightdown_P1 = 0f;
     private float _lightdown_P2 = 0f;
+    private bool _lightP1 = false;
+    private bool _lightP2 = false;
 
     private void Start()
     {
@@ -38,10 +42,55 @@ public class PlayerMovement : MonoBehaviour
             vignette.intensity.overrideState = true;
             vignette.active = true;
         }
+
+        var hold_light_p1_action = new InputAction("fire");
+        hold_light_p1_action.AddBinding("<HID::USB gamepad           >/button4")
+            .WithInteractions("hold");
+
+        hold_light_p1_action.performed +=
+            context =>
+            {
+                if (context.interaction is HoldInteraction)
+                    _lightP1 = true;
+            };
+
+        hold_light_p1_action.canceled +=
+            _ => _lightP1 = false;
+
+
+        hold_light_p1_action.Enable();
+
+        var hold_light_p2_action = new InputAction("fire");
+        hold_light_p2_action.AddBinding("<HID::USB Gamepad >/button4")
+            .WithInteractions("hold");
+
+        hold_light_p2_action.performed +=
+            context =>
+            {
+                if (context.interaction is HoldInteraction)
+                    _lightP2 = true;
+            };
+
+        hold_light_p2_action.canceled +=
+            _ => _lightP2 = false;
+
+
+        hold_light_p2_action.Enable();
+
     }
 
     void Update()
     {
+
+        if (_lightP1)
+        {
+            hold_light_p1();
+        }
+
+        if (_lightP2)
+        {
+            hold_light_p2();
+        }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && !_action)
         {
