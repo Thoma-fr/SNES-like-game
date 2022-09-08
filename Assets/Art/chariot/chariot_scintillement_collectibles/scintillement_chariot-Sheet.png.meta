@@ -119,8 +119,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 17b080c22bdf5444ba9aaa94af25b1a1
       internalID: 1391786162
+=======
+      spriteID: 5f8da7c6e4ddc9f41b12fe1a1a8c85e2
+      internalID: 1665225787
+>>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
       vertices: []
       indices: 
       edges: []
@@ -140,8 +145,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 0dd561927d39aea4b8edcfeae0670610
       internalID: -702951074
+=======
+      spriteID: 934d5a1888b82c444862f3c2a172e088
+      internalID: -1607366861
+>>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
       vertices: []
       indices: 
       edges: []
@@ -161,8 +171,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 32dcf3fbdd5017b418cb56dbd9205934
       internalID: -109687254
+=======
+      spriteID: 39f89251c1acf374fa6b87392ce00e10
+      internalID: -474029822
+>>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
       vertices: []
       indices: 
       edges: []
@@ -182,8 +197,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: fe778334c9117f5458a2c0613eeddfd6
       internalID: -436928419
+=======
+      spriteID: b12a40941091e624fac9e005105e4d51
+      internalID: 951083604
+>>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
       vertices: []
       indices: 
       edges: []
@@ -199,10 +219,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD
       scintillement_chariot-Sheet_1: -702951074
       scintillement_chariot-Sheet_0: 1391786162
       scintillement_chariot-Sheet_2: -109687254
       scintillement_chariot-Sheet_3: -436928419
+=======
+      scintillement_chariot-Sheet_1: -1607366861
+      scintillement_chariot-Sheet_0: 1665225787
+      scintillement_chariot-Sheet_2: -474029822
+      scintillement_chariot-Sheet_3: 951083604
+>>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

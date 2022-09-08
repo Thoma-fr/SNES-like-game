@@ -119,8 +119,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 05360b5e2fca01242b09c412e8f7ea94
       internalID: -33903450
+=======
+      spriteID: 76507a826e96bce44b1d8f9f0df0fac8
+      internalID: 961941881
+>>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
       vertices: []
       indices: 
       edges: []
@@ -140,8 +145,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: e2d77634a8ca98648b47f8ffdb8d97c7
       internalID: 570195513
+=======
+      spriteID: 6471b50a8f148494888c8ec145327b94
+      internalID: -510017110
+>>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
       vertices: []
       indices: 
       edges: []
@@ -161,8 +171,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: b76a1269692646c4bab771d69ba87b67
       internalID: 1945885855
+=======
+      spriteID: ed481be345c4a864ebe12e6931c617ee
+      internalID: -1981485225
+>>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
       vertices: []
       indices: 
       edges: []
@@ -182,8 +197,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 016b6183d02a8f34582751033f398064
       internalID: -1719396609
+=======
+      spriteID: acaa398defab7ec4597cb113f8ee8994
+      internalID: -187433142
+>>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
       vertices: []
       indices: 
       edges: []
@@ -199,10 +219,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD
       "\xE9tincelles_chariot-Sheet_0": -33903450
       "\xE9tincelles_chariot-Sheet_3": -1719396609
       "\xE9tincelles_chariot-Sheet_1": 570195513
       "\xE9tincelles_chariot-Sheet_2": 1945885855
+=======
+      "\xE9tincelles_chariot-Sheet_0": 961941881
+      "\xE9tincelles_chariot-Sheet_3": -187433142
+      "\xE9tincelles_chariot-Sheet_1": -510017110
+      "\xE9tincelles_chariot-Sheet_2": -1981485225
+>>>>>>> 552f27e6a57a3f022d08384aa789152089e94a18
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
