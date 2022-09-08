@@ -358,7 +358,7 @@
                 {
                     "name": "",
                     "id": "27eb0354-efce-44fb-aa55-4f567465f463",
-                    "path": "<Joystick>/trigger",
+                    "path": "<HID::USB Gamepad >/trigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

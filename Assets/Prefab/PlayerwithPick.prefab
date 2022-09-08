@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6440741505215715475}
   - component: {fileID: 7827064311670620662}
   - component: {fileID: 1126713516675989676}
+  - component: {fileID: 2177243972085028304}
   m_Layer: 0
   m_Name: PlayerwithPick
   m_TagString: Untagged
@@ -158,8 +159,7 @@ MonoBehaviour:
   volume: {fileID: 0}
   _vignette_speed: 0.001
   _vignette_max: 0.25
-  _light: 0
-  _nb_light: 0
+  time_light: 0.1
 --- !u!114 &1126713516675989676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +177,184 @@ MonoBehaviour:
   canDestroy: 0
   collisionWarning: {fileID: 7665860340671103009}
   coinText: {fileID: 0}
+--- !u!114 &2177243972085028304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2514634019401056727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2a15d492f8d165641b8576ef4af245f7, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: move_p1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0282bb9c-4ccb-4ce7-a625-82dd432e2b21
+    m_ActionName: PlayerController/MoveLTP1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 24f47d03-27e2-495c-8c9f-0d0607a13047
+    m_ActionName: PlayerController/MoveRTP1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 274634f9-9c9f-4844-98fa-b696fd68a219
+    m_ActionName: PlayerController/Start
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 27edd0a3-fff9-415f-aece-d65014fa418c
+    m_ActionName: PlayerController/MoveLTP2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: move_p2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 94f99819-b642-4a0e-8995-8a99d103db45
+    m_ActionName: PlayerController/MoveRT2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ChangeLaneTrigger, Assembly-CSharp
+        m_MethodName: UP_P1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 50fd8457-7927-4aa0-9021-a9146d1cead1
+    m_ActionName: PlayerController/UpArrowP1
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ChangeLaneTrigger, Assembly-CSharp
+        m_MethodName: UP_P2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6f6dcaae-8f0d-4e7d-b895-953048860076
+    m_ActionName: PlayerController/UpArrowP2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ChangeLaneTrigger, Assembly-CSharp
+        m_MethodName: DOWN_P1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 77ccefd5-6911-472d-80c0-eea849adb185
+    m_ActionName: PlayerController/DownArrowP1
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ChangeLaneTrigger, Assembly-CSharp
+        m_MethodName: DOWN_P2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3b0a53bf-1ae9-4ea1-968f-d89fcff3e98a
+    m_ActionName: PlayerController/DownArrowP2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: hold_light_p1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 56a82db1-9837-43d7-b396-e5b3fea6963d
+    m_ActionName: PlayerController/LightP1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b31b1fab-b41e-4240-a095-a448a1ffef3d
+    m_ActionName: PlayerController/Heal
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fa56728f-e432-4e70-ace6-40300114c4de
+    m_ActionName: PlayerController/Break
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: hold_light_p2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4c6733c5-e4a3-4448-ac56-0b896c181f98
+    m_ActionName: PlayerController/PressLightP2
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerController
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &7665860340671103009
 GameObject:
   m_ObjectHideFlags: 0

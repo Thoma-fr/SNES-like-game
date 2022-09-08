@@ -25,7 +25,7 @@ public class PlayerLucasG : MonoBehaviour
     private TextMeshProUGUI TMPtext;
    
     private GameObject objectToDestroy;
-    private Animator animator;
+    public Animator animator;
     private SpriteRenderer spriteRenderer;
     
 
@@ -122,6 +122,7 @@ public class PlayerLucasG : MonoBehaviour
                 nbOfHealPresses = 0;
             }
         }
+        Debug.Log("heal");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -144,5 +145,17 @@ public class PlayerLucasG : MonoBehaviour
         yield return new WaitForSeconds(coroutineInterval);
         spriteRenderer.color = new Vector4(255, 255, 255, 255);
         canTakeDamage = true;
+    }
+    public void DestroyObstacle()
+    {
+        if (canDestroy)
+        {
+            if (objectToDestroy.CompareTag("Coin"))
+            {
+                AddCoin();
+            }
+            Destroy(objectToDestroy);
+        }
+        Debug.Log("destroy");
     }
 }
