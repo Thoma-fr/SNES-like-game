@@ -1,0 +1,74 @@
+{
+    "name": "PlayerController",
+    "maps": [
+        {
+            "name": "PlayerController",
+            "id": "e9b0050c-7499-471d-a58a-fbbe29dd29a2",
+            "actions": [
+                {
+                    "name": "MoveLT",
+                    "type": "Button",
+                    "id": "0282bb9c-4ccb-4ce7-a625-82dd432e2b21",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveRT",
+                    "type": "Button",
+                    "id": "24f47d03-27e2-495c-8c9f-0d0607a13047",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Start",
+                    "type": "Button",
+                    "id": "274634f9-9c9f-4844-98fa-b696fd68a219",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "61e50915-7ada-4584-91d6-7e405703b65e",
+                    "path": "<HID::USB gamepad           >/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "921b7374-8dbc-4708-a4f3-132bdb434b16",
+                    "path": "<HID::USB gamepad           >/button7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc1ec075-0c2b-4ca6-83ee-4cb0641d8081",
+                    "path": "<HID::USB gamepad           >/button10",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

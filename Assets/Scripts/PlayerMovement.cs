@@ -50,4 +50,8 @@ public class PlayerMovement : MonoBehaviour
     {
         target = position;
     }
+    public void move()
+    {
+        _rb.AddForce(new Vector2(_force, 0));
+    }
 }
