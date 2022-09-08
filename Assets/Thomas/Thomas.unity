@@ -622,6 +622,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 274634f9-9c9f-4844-98fa-b696fd68a219
     m_ActionName: PlayerController/Start[/USB gamepad           /button10]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 27edd0a3-fff9-415f-aece-d65014fa418c
+    m_ActionName: PlayerController/MoveLTP2[/USB Gamepad /button5,/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 94f99819-b642-4a0e-8995-8a99d103db45
+    m_ActionName: PlayerController/MoveRT2[/USB Gamepad /button6,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerController
@@ -636,6 +644,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8017ab0107195349a792e5b77cb7c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1051732820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051732810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af982b75951a5a443848ef679285ae7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1142135147

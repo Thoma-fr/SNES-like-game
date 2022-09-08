@@ -14,6 +14,7 @@ public class INput : MonoBehaviour
     void Update()
     {
 
+
         if(Input.GetKeyDown(KeyCode.Joystick1Button5))
         {
             Debug.Log("j1 right");
@@ -32,5 +33,6 @@ public class INput : MonoBehaviour
         }
 
     }
+
 
 }

@@ -49,6 +49,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UpArrowP1",
+                    "type": "Button",
+                    "id": "50fd8457-7927-4aa0-9021-a9146d1cead1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UpArrowP2",
+                    "type": "Button",
+                    "id": "6f6dcaae-8f0d-4e7d-b895-953048860076",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DownArrowP1",
+                    "type": "Button",
+                    "id": "77ccefd5-6911-472d-80c0-eea849adb185",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DownArrowP2",
+                    "type": "Button",
+                    "id": "3b0a53bf-1ae9-4ea1-968f-d89fcff3e98a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -65,30 +101,8 @@
                 },
                 {
                     "name": "",
-                    "id": "1e1649fa-63c7-4e09-a4a7-2b169169e823",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveLTP1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "921b7374-8dbc-4708-a4f3-132bdb434b16",
                     "path": "<HID::USB gamepad           >/button7",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveRTP1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c963deaf-2b97-4707-b5ba-662ccf2ec46d",
-                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -148,6 +162,72 @@
                     "processors": "",
                     "groups": "",
                     "action": "MoveRT2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1e1649fa-63c7-4e09-a4a7-2b169169e823",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLTP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c963deaf-2b97-4707-b5ba-662ccf2ec46d",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRTP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "24e4de3c-aa38-4378-be99-6bbeeb46129b",
+                    "path": "<HID::USB gamepad           >/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpArrowP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "685cec03-accf-4507-bbc1-035e43b6c062",
+                    "path": "<HID::USB Gamepad >/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpArrowP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "52a1af56-dc72-4875-ae62-4f3b1f5421b1",
+                    "path": "<HID::USB gamepad           >/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DownArrowP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "261dc6d9-98e8-4997-816d-0852b39d0728",
+                    "path": "<HID::USB Gamepad >/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DownArrowP2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
