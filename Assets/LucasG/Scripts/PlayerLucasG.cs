@@ -9,12 +9,16 @@ public class PlayerLucasG : MonoBehaviour
     public static PlayerLucasG Instance { get; private set; }
 
     public int hp = 4;
+    [Range(0.0f, 0.4f)]
+    public float coroutineInterval;
+
     public bool canDestroy = false;
     public GameObject collisionWarning;
 
     private float coin;
     private float nbOfHealPresses;
     private bool canHeal = false;
+    private bool canTakeDamage = true;
     private bool isDamaged = false;
     [SerializeField]
     private GameObject coinText;
@@ -22,6 +26,7 @@ public class PlayerLucasG : MonoBehaviour
    
     private GameObject objectToDestroy;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     
 
     private void Awake()
@@ -33,6 +38,7 @@ public class PlayerLucasG : MonoBehaviour
     {
         TMPtext = coinText.GetComponent<TextMeshProUGUI>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         collisionWarning.SetActive(false);
     }
 
@@ -48,6 +54,10 @@ public class PlayerLucasG : MonoBehaviour
                 }
                 Destroy(objectToDestroy);
             }
+        }
+        else if (Input.GetKeyDown(KeyCode.H))
+        {
+            TakeDamage();
         }
 
         switch (hp)
@@ -92,8 +102,13 @@ public class PlayerLucasG : MonoBehaviour
 
     public void TakeDamage()
     {
-        hp--;
-        Debug.Log(hp);
+        if (canTakeDamage)
+        {
+            hp--;
+            Debug.Log(hp);
+            StartCoroutine("DamageCoroutine");
+            canTakeDamage = false;
+        }
     }
 
     public void Heal()
@@ -116,5 +131,18 @@ public class PlayerLucasG : MonoBehaviour
             TakeDamage();
             Destroy(collision.gameObject);
         }
+    }
+
+    private IEnumerator DamageCoroutine()
+    {
+        yield return new WaitForSeconds(coroutineInterval);
+        spriteRenderer.color = new Vector4(255, 255, 255, 0);
+        yield return new WaitForSeconds(coroutineInterval);
+        spriteRenderer.color = new Vector4(255, 255, 255, 255);
+        yield return new WaitForSeconds(coroutineInterval);
+        spriteRenderer.color = new Vector4(255, 255, 255, 0);
+        yield return new WaitForSeconds(coroutineInterval);
+        spriteRenderer.color = new Vector4(255, 255, 255, 255);
+        canTakeDamage = true;
     }
 }

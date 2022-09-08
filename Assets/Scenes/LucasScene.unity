@@ -420,6 +420,10 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 1474409456}
+    - target: {fileID: 1126713516675989676, guid: fa55f1e349e15a14195b0c71132dcf1d, type: 3}
+      propertyPath: coroutineInterval
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2514634019401056727, guid: fa55f1e349e15a14195b0c71132dcf1d, type: 3}
       propertyPath: m_Name
       value: PlayerwithPick
@@ -471,6 +475,14 @@ PrefabInstance:
     - target: {fileID: 2514634019401056729, guid: fa55f1e349e15a14195b0c71132dcf1d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514634019401056730, guid: fa55f1e349e15a14195b0c71132dcf1d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514634019401056730, guid: fa55f1e349e15a14195b0c71132dcf1d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7827064311681454450, guid: fa55f1e349e15a14195b0c71132dcf1d, type: 3}
       propertyPath: m_TargetTexture
