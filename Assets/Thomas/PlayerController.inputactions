@@ -85,6 +85,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Light",
+                    "type": "Button",
+                    "id": "56a82db1-9837-43d7-b396-e5b3fea6963d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Heal",
+                    "type": "Button",
+                    "id": "b31b1fab-b41e-4240-a095-a448a1ffef3d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Break",
+                    "type": "Button",
+                    "id": "fa56728f-e432-4e70-ace6-40300114c4de",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -272,6 +299,72 @@
                     "processors": "",
                     "groups": "",
                     "action": "DownArrowP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6ca32d79-70bd-4e02-bed5-7c9c863a7a00",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Light",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1c167357-869f-48be-b34c-43b0dad792cf",
+                    "path": "<HID::USB gamepad           >/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Light",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "819a59e1-cd43-4f40-9ce3-cc152ef09687",
+                    "path": "<HID::USB gamepad           >/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Heal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e59363b-c291-4a00-b63a-c6daf7de3955",
+                    "path": "<Keyboard>/h",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Heal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "27eb0354-efce-44fb-aa55-4f567465f463",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Break",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b3081e9b-0aba-4d04-b662-d192780a3792",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Break",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
