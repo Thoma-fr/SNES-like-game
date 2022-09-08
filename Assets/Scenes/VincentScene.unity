@@ -2847,6 +2847,62 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 94f99819-b642-4a0e-8995-8a99d103db45
     m_ActionName: PlayerController/MoveRT2
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 50fd8457-7927-4aa0-9021-a9146d1cead1
+    m_ActionName: PlayerController/UpArrowP1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f6dcaae-8f0d-4e7d-b895-953048860076
+    m_ActionName: PlayerController/UpArrowP2
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 77ccefd5-6911-472d-80c0-eea849adb185
+    m_ActionName: PlayerController/DownArrowP1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3b0a53bf-1ae9-4ea1-968f-d89fcff3e98a
+    m_ActionName: PlayerController/DownArrowP2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1624836991}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: AddLight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 56a82db1-9837-43d7-b396-e5b3fea6963d
+    m_ActionName: PlayerController/LightP1
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b31b1fab-b41e-4240-a095-a448a1ffef3d
+    m_ActionName: PlayerController/Heal
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fa56728f-e432-4e70-ace6-40300114c4de
+    m_ActionName: PlayerController/Break
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1624836991}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: AddLight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2fffbb1d-ca01-401b-b7a9-c4c2a3de6b11
+    m_ActionName: PlayerController/LightP2
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerController
@@ -3095,6 +3151,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 284565939, guid: 2d3c12b8caa54e946be0a30e815c4cc3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3209695624480466986, guid: 2d3c12b8caa54e946be0a30e815c4cc3, type: 3}
       propertyPath: m_Name
       value: SNES Renderer

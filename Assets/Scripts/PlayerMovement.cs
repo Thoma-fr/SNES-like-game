@@ -54,15 +54,22 @@ public class PlayerMovement : MonoBehaviour
             _rb.velocity = new Vector2(_maxSpeed, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Keypad5))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            _light = true;
-            _nb_light++;
+            AddLight();
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad5))
+        {
+            AddLight();
         }
         
-        if(Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Keypad5))
+        if(Input.GetKeyUp(KeyCode.Space))
         {
-            _nb_light--;
+            RemoveLight();
+        }
+        if (Input.GetKeyUp(KeyCode.Keypad5))
+        {
+            RemoveLight();
         }
 
         if (_nb_light == 0)
@@ -72,18 +79,23 @@ public class PlayerMovement : MonoBehaviour
 
         if (_light)
         {
-            if (vignette.intensity.value > _vignette_max * _nb_light)
+            if (vignette.intensity.value > (_vignette_max * 2 - _vignette_max * _nb_light))
             {
                 vignette.intensity.value -= _vignette_speed / 1000;
             }
+
+            if (vignette.intensity.value < (_vignette_max * 2 - _vignette_max * _nb_light))
+            {
+                vignette.intensity.value += _vignette_speed / 1000;
+            }
         }
-        else if (vignette.intensity.value < _vignette_max)
+        else if (vignette.intensity.value < _vignette_max * 2)
         {
             vignette.intensity.value += _vignette_speed / 1000;
 
-            if (vignette.intensity.value > _vignette_max )
+            if (vignette.intensity.value > _vignette_max * 2 )
             {
-                vignette.intensity.value = _vignette_max ;
+                vignette.intensity.value = _vignette_max * 2;
             }
         }
 
@@ -100,6 +112,17 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
+    }
+
+    public void AddLight()
+    {
+        _light = true;
+        _nb_light++;
+    }
+
+    public void RemoveLight()
+    {
+        _nb_light--;
     }
 
     public void GoTo(Vector3 position)
