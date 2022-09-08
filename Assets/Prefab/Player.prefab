@@ -177,7 +177,6 @@ GameObject:
   - component: {fileID: 3890351156276490654}
   - component: {fileID: 509569275}
   - component: {fileID: 5377003871585925828}
-  - component: {fileID: 1051732816}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -314,9 +313,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 3890351156276490654}
-  _speed: 200
+  _actual_speed: 0
+  _speed_jump: 20
   _force: 100
   _maxSpeed: 20
+  volume: {fileID: 0}
+  _vignette_speed: 2
+  _vignette_max: 0.5
 --- !u!61 &5377003871585925828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -343,16 +346,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1051732816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5654999222389303514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b932ca60618a9459748c1d16a17419, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinText: {fileID: 0}
