@@ -87,7 +87,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Light",
+                    "name": "LightP1",
                     "type": "Button",
                     "id": "56a82db1-9837-43d7-b396-e5b3fea6963d",
                     "expectedControlType": "Button",
@@ -108,6 +108,15 @@
                     "name": "Break",
                     "type": "Button",
                     "id": "fa56728f-e432-4e70-ace6-40300114c4de",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LightP2",
+                    "type": "Button",
+                    "id": "2fffbb1d-ca01-401b-b7a9-c4c2a3de6b11",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -309,7 +318,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Light",
+                    "action": "LightP1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -320,7 +329,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Light",
+                    "action": "LightP1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -365,6 +374,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Break",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7625558a-5ac2-4734-acb0-a943a74c5b57",
+                    "path": "<HID::USB Gamepad >/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LightP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c706e81f-dcc7-4784-97a9-586b3b71cfc5",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LightP2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
