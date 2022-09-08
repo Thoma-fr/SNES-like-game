@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6110d4068534982479a094d14398079f
+guid: 8dd7e870a3e27794cad49445500403c4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,91 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: "\xE9tincelles_chariot-Sheet_0"
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 0
-        width: 48
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05360b5e2fca01242b09c412e8f7ea94
-      internalID: -33903450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\xE9tincelles_chariot-Sheet_1"
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 47
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2d77634a8ca98648b47f8ffdb8d97c7
-      internalID: 570195513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\xE9tincelles_chariot-Sheet_2"
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 0
-        width: 46
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b76a1269692646c4bab771d69ba87b67
-      internalID: 1945885855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\xE9tincelles_chariot-Sheet_3"
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 0
-        width: 46
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 016b6183d02a8f34582751033f398064
-      internalID: -1719396609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -198,11 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      "\xE9tincelles_chariot-Sheet_0": -33903450
-      "\xE9tincelles_chariot-Sheet_3": -1719396609
-      "\xE9tincelles_chariot-Sheet_1": 570195513
-      "\xE9tincelles_chariot-Sheet_2": 1945885855
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
