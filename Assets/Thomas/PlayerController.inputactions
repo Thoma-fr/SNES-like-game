@@ -6,7 +6,7 @@
             "id": "e9b0050c-7499-471d-a58a-fbbe29dd29a2",
             "actions": [
                 {
-                    "name": "MoveLT",
+                    "name": "MoveLTP1",
                     "type": "Button",
                     "id": "0282bb9c-4ccb-4ce7-a625-82dd432e2b21",
                     "expectedControlType": "Button",
@@ -15,18 +15,36 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "MoveRT",
+                    "name": "MoveRTP1",
                     "type": "Button",
                     "id": "24f47d03-27e2-495c-8c9f-0d0607a13047",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "initialStateCheck": false
                 },
                 {
                     "name": "Start",
                     "type": "Button",
                     "id": "274634f9-9c9f-4844-98fa-b696fd68a219",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveLTP2",
+                    "type": "Button",
+                    "id": "27edd0a3-fff9-415f-aece-d65014fa418c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MoveRT2",
+                    "type": "Button",
+                    "id": "94f99819-b642-4a0e-8995-8a99d103db45",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -38,10 +56,21 @@
                     "name": "",
                     "id": "61e50915-7ada-4584-91d6-7e405703b65e",
                     "path": "<HID::USB gamepad           >/button5",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLTP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1e1649fa-63c7-4e09-a4a7-2b169169e823",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveLT",
+                    "action": "MoveLTP1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -52,7 +81,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveRT",
+                    "action": "MoveRTP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c963deaf-2b97-4707-b5ba-662ccf2ec46d",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRTP1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -64,6 +104,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67514c59-973c-4e23-81f9-9e7f730e93eb",
+                    "path": "<HID::USB Gamepad >/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLTP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4895edfa-00c6-4bfc-b5e5-f5e9c0a0b20e",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveLTP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3e8871ea-9bcc-421a-9517-4bb50ac1d9fc",
+                    "path": "<HID::USB Gamepad >/button6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRT2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ac87a79-68f7-4a37-8d6a-465d2d211b52",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRT2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
