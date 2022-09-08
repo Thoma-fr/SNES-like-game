@@ -2864,19 +2864,7 @@ MonoBehaviour:
     m_ActionId: 3b0a53bf-1ae9-4ea1-968f-d89fcff3e98a
     m_ActionName: PlayerController/DownArrowP2
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1624836991}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: AddLight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 56a82db1-9837-43d7-b396-e5b3fea6963d
     m_ActionName: PlayerController/LightP1
   - m_PersistentCalls:
@@ -2888,10 +2876,18 @@ MonoBehaviour:
     m_ActionId: fa56728f-e432-4e70-ace6-40300114c4de
     m_ActionName: PlayerController/Break
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2fffbb1d-ca01-401b-b7a9-c4c2a3de6b11
+    m_ActionName: PlayerController/LightP2
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4c6733c5-e4a3-4448-ac56-0b896c181f98
+    m_ActionName: PlayerController/PressLightP2
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1624836991}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: AddLight
+        m_MethodName: hold_light_p1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2901,8 +2897,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 2fffbb1d-ca01-401b-b7a9-c4c2a3de6b11
-    m_ActionName: PlayerController/LightP2
+    m_ActionId: fc75ac49-c2f1-41c1-908d-20dcb7b53c02
+    m_ActionName: PlayerController/ReleaseLightP1
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1624836991}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: hold_light_p2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6ae3c679-5c66-48bb-8384-d78fd62f848f
+    m_ActionName: PlayerController/ReleaseLightP2
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerController
