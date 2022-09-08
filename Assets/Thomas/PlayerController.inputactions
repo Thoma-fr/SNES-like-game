@@ -200,8 +200,30 @@
                 },
                 {
                     "name": "",
+                    "id": "73825576-b90e-4322-8e43-f653ba90059d",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpArrowP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "685cec03-accf-4507-bbc1-035e43b6c062",
                     "path": "<HID::USB Gamepad >/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpArrowP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "12cec15b-41de-4535-9821-607a57214790",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -222,8 +244,30 @@
                 },
                 {
                     "name": "",
+                    "id": "fe710cd5-d825-4ef5-a3f3-ca2322b16a33",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DownArrowP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "261dc6d9-98e8-4997-816d-0852b39d0728",
                     "path": "<HID::USB Gamepad >/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DownArrowP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d6fdbda4-ff37-4eb9-a539-ad8b8d151d0d",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
