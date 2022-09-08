@@ -87,12 +87,12 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "LightP1",
+                    "name": "PressLightP1",
                     "type": "Button",
                     "id": "56a82db1-9837-43d7-b396-e5b3fea6963d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Hold",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 },
                 {
@@ -117,6 +117,33 @@
                     "name": "LightP2",
                     "type": "Button",
                     "id": "2fffbb1d-ca01-401b-b7a9-c4c2a3de6b11",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PressLightP2",
+                    "type": "Button",
+                    "id": "4c6733c5-e4a3-4448-ac56-0b896c181f98",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReleaseLightP1",
+                    "type": "Button",
+                    "id": "fc75ac49-c2f1-41c1-908d-20dcb7b53c02",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReleaseLightP2",
+                    "type": "Button",
+                    "id": "6ae3c679-5c66-48bb-8384-d78fd62f848f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -318,7 +345,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "LightP1",
+                    "action": "PressLightP1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -329,7 +356,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "LightP1",
+                    "action": "PressLightP1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -396,6 +423,61 @@
                     "processors": "",
                     "groups": "",
                     "action": "LightP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "82605435-dc4e-479b-8f92-e60e94e6e151",
+                    "path": "<HID::USB gamepad           >/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressLightP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "282ad3e9-8bed-4f4a-a140-11ad89fd9e46",
+                    "path": "<HID::USB gamepad           >/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseLightP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0828191b-8872-44ba-933c-125799e1db13",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseLightP1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "db5c3b97-1da1-419b-8e42-7316f2489632",
+                    "path": "<HID::USB Gamepad >/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseLightP2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af8de5f6-adde-4962-8773-d5f99097524a",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReleaseLightP2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
