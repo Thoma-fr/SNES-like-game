@@ -137,7 +137,7 @@
                     "id": "fc75ac49-c2f1-41c1-908d-20dcb7b53c02",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "initialStateCheck": false
                 },
                 {
@@ -146,7 +146,7 @@
                     "id": "6ae3c679-5c66-48bb-8384-d78fd62f848f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "initialStateCheck": false
                 }
             ],
