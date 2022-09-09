@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
     private PlayerLucasG playerInfo;
     public Sprite[] simple;
     public Sprite[] damaged;
-    public Sprite[] attackSprite; 
 
     private SpriteRenderer sprite;
     private void Start()
@@ -212,13 +211,14 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator P1()
     {
-        Debug.Log("courou");
+        
         Debug.Log(simple[2]);
         if(playerInfo.hp>2)
         {
-        sprite.sprite = simple[0];
-        yield return new WaitForSeconds(0.2f);
-        sprite.sprite = simple[1];
+            Debug.Log("courou");
+            sprite.sprite = simple[0];
+            yield return new WaitForSeconds(0.2f);
+            sprite.sprite = simple[1];
         }
         else
         {
@@ -231,11 +231,11 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator P2()
     {
-        Debug.Log("courou");
+        
         Debug.Log(simple[2]);
         if (playerInfo.hp > 2)
         {
-
+            Debug.Log("courou");
             sprite.sprite = simple[2];
             yield return new WaitForSeconds(0.2f);
             sprite.sprite = simple[3];

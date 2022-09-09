@@ -28,8 +28,6 @@ public class PlayerLucasG : MonoBehaviour
    //public Animator animator;
     public SpriteRenderer spriteRenderer;
 
-    public bool isattacking;
-
     public Sprite[] attackSprite;
 
     private void Awake()
@@ -154,7 +152,7 @@ public class PlayerLucasG : MonoBehaviour
     {
         if (canDestroy)
         {
-            isattacking = true;
+            
             if (objectToDestroy.CompareTag("Coin"))
             {
                 AddCoin();
