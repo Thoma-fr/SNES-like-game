@@ -179,7 +179,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7044286995184610872
 Transform:
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3067596773898829519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.4566305, y: -5.0272045, z: 0}
+  m_LocalPosition: {x: -0.06, y: 2.19, z: 0}
   m_LocalScale: {x: 0.48005587, y: 0.3363466, z: 0.25122175}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -260,7 +260,6 @@ GameObject:
   - component: {fileID: 5654999222389303511}
   - component: {fileID: 3890351156276490654}
   - component: {fileID: 509569275}
-  - component: {fileID: 5377003871585925828}
   - component: {fileID: 7119107468166997895}
   - component: {fileID: 4241038941872002680}
   m_Layer: 0
@@ -409,8 +408,7 @@ MonoBehaviour:
   _vignette_max: 0.5
   time_light: 0.1
   floatHeight: 10
-  liftForce: 10
-  damping: 10
+  gravity: 10
   simple:
   - {fileID: -595640113, guid: aed132d5d970d5146b36cf61c36dcafc, type: 3}
   - {fileID: 21993079, guid: aed132d5d970d5146b36cf61c36dcafc, type: 3}
@@ -421,32 +419,6 @@ MonoBehaviour:
   - {fileID: -1585798924, guid: e2d24e685f815c549ad44b5582e454a7, type: 3}
   - {fileID: -1282260495, guid: e2d24e685f815c549ad44b5582e454a7, type: 3}
   - {fileID: 1779616272, guid: e2d24e685f815c549ad44b5582e454a7, type: 3}
---- !u!61 &5377003871585925828
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5654999222389303514}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 3.5486207, y: -0.3736651}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.878788, y: 3.878788}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.7569609, y: 2.510303}
-  m_EdgeRadius: 0
 --- !u!114 &7119107468166997895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,6 +626,7 @@ MonoBehaviour:
   canDestroy: 0
   collisionWarning: {fileID: 3067596773898829519}
   coinText: {fileID: 0}
+  pauseCanvas: {fileID: 0}
   rock: {fileID: 0}
   goldenRock: {fileID: 0}
   spriteRenderer: {fileID: 5654999222389303509}
