@@ -63,6 +63,7 @@ public class PlayerLucasG : MonoBehaviour
                     objectToDestroy.GetComponent<SpriteRenderer>().sprite = rock;
                     objectToDestroy.GetComponent<Collider2D>().enabled = false;
                 }
+                StartCoroutine(attack());
             }
         }
         else if (Input.GetKeyDown(KeyCode.H))
@@ -85,7 +86,7 @@ public class PlayerLucasG : MonoBehaviour
 
         if (hp == 0)
         {
-            SceneManager.LoadScene("LucasScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         if (isDamaged)

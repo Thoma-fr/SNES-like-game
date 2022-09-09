@@ -656,7 +656,7 @@ MonoBehaviour:
   coinText: {fileID: 0}
   rock: {fileID: 0}
   goldenRock: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 5654999222389303509}
   attackSprite:
   - {fileID: -671323527553045701, guid: 69308e9ab118185418da1cebd61519e3, type: 3}
   - {fileID: 1325521406, guid: 69308e9ab118185418da1cebd61519e3, type: 3}
