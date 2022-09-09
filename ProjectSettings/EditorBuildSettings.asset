@@ -6,7 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 6398743e7985db544865ffdabac49552
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/lv2.unity
+    guid: 1c364f6aef04b1b46b04ef348de17665
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 3f90f41f85b63e14f88513f1fd2eee1e
+  - enabled: 1
+    path: Assets/Scenes/Alvi tuto.unity
+    guid: 5f573f264bca3404583633b2aad82f1e
+  - enabled: 1
+    path: Assets/Scenes/LevelSelection.unity
+    guid: 3ab6866efc18d9940b3c85675d60175f
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 599d38775968866469e4ccc8077e889d, type: 2}
