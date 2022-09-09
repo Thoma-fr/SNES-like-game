@@ -39,7 +39,7 @@ public class StartMenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            SceneManager.LoadScene(sceneToLoad);
+            nextScene();
         }
     }
 
@@ -109,5 +109,9 @@ public class StartMenuManager : MonoBehaviour
 
             FXSwitch = !FXSwitch;
         }
+    }
+    public void nextScene()
+    {
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

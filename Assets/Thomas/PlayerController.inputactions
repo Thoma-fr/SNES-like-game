@@ -159,6 +159,17 @@
                 },
                 {
                     "name": "",
+                    "id": "6c09fc30-1752-4953-aa82-bea7ba9280d8",
+                    "path": "<HID::USB Gamepad >/button10",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "67514c59-973c-4e23-81f9-9e7f730e93eb",
                     "path": "<HID::USB Gamepad >/button5",
                     "interactions": "",

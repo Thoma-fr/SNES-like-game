@@ -123,6 +123,147 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &403757896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403757898}
+  - component: {fileID: 403757897}
+  - component: {fileID: 403757899}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &403757897
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403757896}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a46a621781145e84996f70b5769141a1, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &403757898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403757896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.190908, y: 8.626789, z: -0.05921987}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &403757899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403757896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599dafb380009dc4e879de8d0e718c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &445527129 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3209695625025872445, guid: 2d3c12b8caa54e946be0a30e815c4cc3, type: 3}
@@ -495,6 +636,7 @@ GameObject:
   - component: {fileID: 1078700839}
   - component: {fileID: 1078700838}
   - component: {fileID: 1078700842}
+  - component: {fileID: 1078700843}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -604,6 +746,101 @@ MonoBehaviour:
   pepite: {fileID: 1935962550}
   globalVolume: {fileID: 1230942145}
   scanLine: {fileID: 445527129}
+--- !u!114 &1078700843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078700837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2a15d492f8d165641b8576ef4af245f7, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0282bb9c-4ccb-4ce7-a625-82dd432e2b21
+    m_ActionName: PlayerController/MoveLTP1[/USB gamepad           /button5,/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 24f47d03-27e2-495c-8c9f-0d0607a13047
+    m_ActionName: PlayerController/MoveRTP1[/USB gamepad           /button7,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1078700842}
+        m_TargetAssemblyTypeName: StartMenuManager, Assembly-CSharp
+        m_MethodName: nextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 274634f9-9c9f-4844-98fa-b696fd68a219
+    m_ActionName: PlayerController/Start[/USB gamepad           /button10]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 27edd0a3-fff9-415f-aece-d65014fa418c
+    m_ActionName: PlayerController/MoveLTP2[/USB Gamepad /button5,/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 94f99819-b642-4a0e-8995-8a99d103db45
+    m_ActionName: PlayerController/MoveRT2[/USB Gamepad /button6,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 50fd8457-7927-4aa0-9021-a9146d1cead1
+    m_ActionName: PlayerController/UpArrowP1[/USB gamepad           /stick/up,/Keyboard/z]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f6dcaae-8f0d-4e7d-b895-953048860076
+    m_ActionName: PlayerController/UpArrowP2[/USB Gamepad /stick/up,/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 77ccefd5-6911-472d-80c0-eea849adb185
+    m_ActionName: PlayerController/DownArrowP1[/USB gamepad           /stick/down,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3b0a53bf-1ae9-4ea1-968f-d89fcff3e98a
+    m_ActionName: PlayerController/DownArrowP2[/USB Gamepad /stick/down,/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 56a82db1-9837-43d7-b396-e5b3fea6963d
+    m_ActionName: PlayerController/HoldLightP1[/Keyboard/l,/USB gamepad          
+      /button4]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4c6733c5-e4a3-4448-ac56-0b896c181f98
+    m_ActionName: PlayerController/HoldLightP2[/USB Gamepad /button4,/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b31b1fab-b41e-4240-a095-a448a1ffef3d
+    m_ActionName: PlayerController/Heal[/USB gamepad           /button2,/Keyboard/h]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fa56728f-e432-4e70-ace6-40300114c4de
+    m_ActionName: PlayerController/Break[/USB Gamepad /trigger,/Keyboard/b]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: PlayerController
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1111277533
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,20 +1035,8 @@ MonoBehaviour:
     m_ActionName: PlayerController/Break
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 2fffbb1d-ca01-401b-b7a9-c4c2a3de6b11
-    m_ActionName: PlayerController/LightP2
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: 4c6733c5-e4a3-4448-ac56-0b896c181f98
     m_ActionName: PlayerController/PressLightP2
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: fc75ac49-c2f1-41c1-908d-20dcb7b53c02
-    m_ActionName: PlayerController/ReleaseLightP1
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6ae3c679-5c66-48bb-8384-d78fd62f848f
-    m_ActionName: PlayerController/ReleaseLightP2
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerController
