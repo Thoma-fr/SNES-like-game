@@ -44,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
     public Sprite[] damaged;
 
     private SpriteRenderer sprite;
+
+    private bool canMove;
     private void Start()
     {
         playerInfo=GetComponent<PlayerLucasG>();
@@ -120,8 +122,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Keypad6) && _action)
         {
-            _rb.AddForce(new Vector2(_force, 0));
-            _action = false;
+            if (canMove)
+            {
+                _rb.AddForce(new Vector2(_force, 0));
+                _action = false;
+            }
         }
 
         if (_rb.velocity.x > _maxSpeed)
@@ -169,6 +174,7 @@ public class PlayerMovement : MonoBehaviour
         {
             step = _speed_jump * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target, step);
+            
             if (Vector3.Distance(transform.position,target) <= 1)
             {
                 _rb.velocity = new Vector2(_speed_jump, 0);
@@ -179,17 +185,24 @@ public class PlayerMovement : MonoBehaviour
         int layerMask = 1 << LayerMask.NameToLayer("Collider");
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,floatHeight, layerMask);
         Debug.DrawLine(transform.position, transform.position + Vector3.down * floatHeight, Color.red);
-
+        Debug.Log(hit.transform.name);
         if (hit.collider == null)
         {
             _rb.AddForce(new Vector2(0, -gravity));
-            
+            canMove = false;
+            _action = false;
+            _rb.gravityScale = 2000;
         }
-
+        else
+        {
+            canMove = true;
+            _rb.gravityScale = 1;
+        }
         //transform.localRotation = Quaternion.Euler(0, 0, Mathf.Clamp(transform.localRotation.eulerAngles.z, -30, 30));
 
 
     }
+
 
     public void GoTo(Vector3 position)
     {

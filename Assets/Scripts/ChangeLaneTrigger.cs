@@ -17,7 +17,7 @@ public class ChangeLaneTrigger : MonoBehaviour
 
     [SerializeField]
     private GameObject _player_go = null;
-    private PlayerMovement _player_movement = null;
+    public PlayerMovement _player_movement = null;
     private Rigidbody2D _player_rb = null;
 
     public GameObject point_up;
