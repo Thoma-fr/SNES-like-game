@@ -37,8 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Gravity")]
     public float floatHeight = 10;
-    public float liftForce = 10;
-    public float damping = 10;
+    public float gravity = 10;
 
     private PlayerLucasG playerInfo;
     public Sprite[] simple;
@@ -183,7 +182,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (hit.collider == null)
         {
-            _rb.AddForce(new Vector2(0, -damping));
+            _rb.AddForce(new Vector2(0, -gravity));
             
         }
 

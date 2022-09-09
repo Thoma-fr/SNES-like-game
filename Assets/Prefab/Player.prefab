@@ -406,7 +406,7 @@ MonoBehaviour:
   _maxSpeed: 20
   volume: {fileID: 0}
   _vignette_speed: 2
-  _vignette_max: 0.25
+  _vignette_max: 0.5
   time_light: 0.1
   floatHeight: 10
   liftForce: 10
