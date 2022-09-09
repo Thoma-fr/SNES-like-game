@@ -35,8 +35,16 @@ public class PlayerMovement : MonoBehaviour
     private bool _lightP1 = false;
     private bool _lightP2 = false;
 
+    private PlayerLucasG playerInfo;
+    public Sprite[] simple;
+    public Sprite[] damaged;
+    public Sprite[] attackSprite; 
+
+    private SpriteRenderer sprite;
     private void Start()
     {
+        playerInfo=GetComponent<PlayerLucasG>();
+        sprite=GetComponent<SpriteRenderer>();
         if (volume.profile.TryGet<Vignette>(out vignette))
         {
             vignette.intensity.overrideState = true;
@@ -186,6 +194,7 @@ public class PlayerMovement : MonoBehaviour
     public void move_p1()
     {
         _action = true;
+        StartCoroutine(P1());
     }
 
     public void move_p2()
@@ -194,6 +203,50 @@ public class PlayerMovement : MonoBehaviour
         {
             _rb.AddForce(new Vector2(_force, 0));
             _action = false;
+            StartCoroutine(P2());
         }
     }
+    public void changeSpriteplayer1up()
+    {
+        StartCoroutine(P1());
+    }
+    IEnumerator P1()
+    {
+        Debug.Log("courou");
+        Debug.Log(simple[2]);
+        if(playerInfo.hp>2)
+        {
+        sprite.sprite = simple[0];
+        yield return new WaitForSeconds(0.2f);
+        sprite.sprite = simple[1];
+        }
+        else
+        {
+            sprite.sprite = damaged[0];
+            yield return new WaitForSeconds(0.2f);
+            sprite.sprite = damaged[1];
+        }
+
+        
+    }
+    IEnumerator P2()
+    {
+        Debug.Log("courou");
+        Debug.Log(simple[2]);
+        if (playerInfo.hp > 2)
+        {
+
+            sprite.sprite = simple[2];
+            yield return new WaitForSeconds(0.2f);
+            sprite.sprite = simple[3];
+        }
+        else
+        {
+            sprite.sprite = damaged[2];
+            yield return new WaitForSeconds(0.2f);
+            sprite.sprite = damaged[3];
+        }
+        
+    }
+
 }

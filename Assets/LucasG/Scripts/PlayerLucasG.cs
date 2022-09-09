@@ -25,9 +25,12 @@ public class PlayerLucasG : MonoBehaviour
     private TextMeshProUGUI TMPtext;
    
     private GameObject objectToDestroy;
-    public Animator animator;
-    private SpriteRenderer spriteRenderer;
-    
+   //public Animator animator;
+    public SpriteRenderer spriteRenderer;
+
+    public bool isattacking;
+
+    public Sprite[] attackSprite;
 
     private void Awake()
     {
@@ -37,8 +40,8 @@ public class PlayerLucasG : MonoBehaviour
     private void Start()
     {
         TMPtext = coinText.GetComponent<TextMeshProUGUI>();
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //animator = GetComponent<Animator>();
+       // spriteRenderer = GetComponent<SpriteRenderer>();
         collisionWarning.SetActive(false);
     }
 
@@ -64,13 +67,14 @@ public class PlayerLucasG : MonoBehaviour
         {
             case > 2:
                 isDamaged = false;
-                canHeal = false;
                 break;
             case <=2:
                 canHeal = true;
                 isDamaged = true;
                 break;
         }
+        if (hp==4)
+            canHeal=false;
 
         if (hp == 0)
         {
@@ -79,11 +83,11 @@ public class PlayerLucasG : MonoBehaviour
 
         if (isDamaged)
         {
-            animator.SetBool("isDamaged", true);
+            //animator.SetBool("isDamaged", true);
         }
         else
         {
-            animator.SetBool("isDamaged", false);
+            //animator.SetBool("isDamaged", false);
         }
     }
 
@@ -116,7 +120,7 @@ public class PlayerLucasG : MonoBehaviour
         if (canHeal)
         {
             nbOfHealPresses++;
-            if (nbOfHealPresses == 7)
+            if (nbOfHealPresses == 15)
             {
                 hp++;
                 nbOfHealPresses = 0;
@@ -150,12 +154,24 @@ public class PlayerLucasG : MonoBehaviour
     {
         if (canDestroy)
         {
+            isattacking = true;
             if (objectToDestroy.CompareTag("Coin"))
             {
                 AddCoin();
+                
             }
             Destroy(objectToDestroy);
+            StartCoroutine(attack());
         }
         Debug.Log("destroy");
+    }
+    IEnumerator attack()
+    {
+        Debug.Log(attackSprite[0]);
+        spriteRenderer.sprite = attackSprite[0];
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.sprite = attackSprite[1];
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.sprite = attackSprite[1];
     }
 }
