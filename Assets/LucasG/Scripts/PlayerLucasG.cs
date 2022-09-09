@@ -86,7 +86,7 @@ public class PlayerLucasG : MonoBehaviour
 
         if (hp == 0)
         {
-            SceneManager.LoadScene("LucasScene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         if (isDamaged)
