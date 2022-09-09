@@ -5,11 +5,10 @@ using UnityEngine;
 public class BackGround : MonoBehaviour
 {
     public GameObject player;
-    private Rigidbody2D rb2d;
 
     private void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        transform.position = player.transform.position;
     }
 
     private void Update()

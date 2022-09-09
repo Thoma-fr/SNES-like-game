@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class DestroyTrigger : MonoBehaviour
 {
+    private SpriteRenderer parentSpriteRenderer;
+
+    private void Start()
+    {
+        parentSpriteRenderer = transform.parent.GetComponent<SpriteRenderer>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
