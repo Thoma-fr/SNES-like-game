@@ -23,7 +23,10 @@ public class PlayerLucasG : MonoBehaviour
     [SerializeField]
     private GameObject coinText;
     private TextMeshProUGUI TMPtext;
-   
+
+    public Sprite rock;
+    public Sprite goldenRock;
+
     private GameObject objectToDestroy;
    //public Animator animator;
     public SpriteRenderer spriteRenderer;
@@ -52,8 +55,14 @@ public class PlayerLucasG : MonoBehaviour
                 if (objectToDestroy.CompareTag("Coin"))
                 {
                     AddCoin();
+                    objectToDestroy.GetComponent<SpriteRenderer>().sprite = goldenRock;
+                    objectToDestroy.GetComponent<Collider2D>().enabled = false;
                 }
-                Destroy(objectToDestroy);
+                else
+                {
+                    objectToDestroy.GetComponent<SpriteRenderer>().sprite = rock;
+                    objectToDestroy.GetComponent<Collider2D>().enabled = false;
+                }
             }
         }
         else if (Input.GetKeyDown(KeyCode.H))
@@ -129,10 +138,17 @@ public class PlayerLucasG : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle") && collision.gameObject.CompareTag("Coin"))
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
             TakeDamage();
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<SpriteRenderer>().sprite = rock;
+            collision.gameObject.GetComponent<Collider2D>().enabled = false;
+        }
+        else if (collision.gameObject.CompareTag("Coin"))
+        {
+            TakeDamage();
+            collision.gameObject.GetComponent<SpriteRenderer>().sprite = goldenRock;
+            collision.gameObject.GetComponent<Collider2D>().enabled = false;
         }
     }
 

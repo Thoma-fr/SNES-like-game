@@ -35,6 +35,11 @@ public class PlayerMovement : MonoBehaviour
     private bool _lightP1 = false;
     private bool _lightP2 = false;
 
+    [Header("Gravity")]
+    public float floatHeight = 10;
+    public float liftForce = 10;
+    public float damping = 10;
+
     private PlayerLucasG playerInfo;
     public Sprite[] simple;
     public Sprite[] damaged;
@@ -84,6 +89,17 @@ public class PlayerMovement : MonoBehaviour
 
         hold_light_p2_action.Enable();
 
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 localEuler = transform.localEulerAngles;
+        if (localEuler.z > 180f)
+        {
+            localEuler.z -= 360;
+        }
+        localEuler.z = Mathf.Clamp(localEuler.z, -30, 30);
+        transform.localEulerAngles = localEuler;
     }
 
     void Update()
@@ -160,7 +176,20 @@ public class PlayerMovement : MonoBehaviour
                 target = Vector3.zero;
             }
         }
-        
+
+        int layerMask = 1 << LayerMask.NameToLayer("Collider");
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,floatHeight, layerMask);
+        Debug.DrawLine(transform.position, transform.position + Vector3.down * floatHeight, Color.red);
+
+        if (hit.collider == null)
+        {
+            _rb.AddForce(new Vector2(0, -damping));
+            
+        }
+
+        //transform.localRotation = Quaternion.Euler(0, 0, Mathf.Clamp(transform.localRotation.eulerAngles.z, -30, 30));
+
+
     }
 
     public void GoTo(Vector3 position)

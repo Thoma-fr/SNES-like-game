@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 3067596773898829519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.4566305, y: -5.0272045, z: 0}
-  m_LocalScale: {x: 0.2265709, y: 0.5933085, z: 0.44314998}
+  m_LocalScale: {x: 0.48005587, y: 0.3363466, z: 0.25122175}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5654999222389303508}
@@ -236,8 +236,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 61a57ca5e815da84ea85ab3d00311e7d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -652,6 +652,8 @@ MonoBehaviour:
   canDestroy: 0
   collisionWarning: {fileID: 3067596773898829519}
   coinText: {fileID: 0}
+  rock: {fileID: 0}
+  goldenRock: {fileID: 0}
   spriteRenderer: {fileID: 0}
   attackSprite:
   - {fileID: -671323527553045701, guid: 69308e9ab118185418da1cebd61519e3, type: 3}
