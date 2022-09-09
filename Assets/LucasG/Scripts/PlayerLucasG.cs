@@ -23,6 +23,8 @@ public class PlayerLucasG : MonoBehaviour
     [SerializeField]
     private GameObject coinText;
     private TextMeshProUGUI TMPtext;
+    private bool timeStopped;
+    public GameObject pauseCanvas;
 
     public Sprite rock;
     public Sprite goldenRock;
@@ -179,6 +181,16 @@ public class PlayerLucasG : MonoBehaviour
             StartCoroutine(attack());
         }
         Debug.Log("destroy");
+    }
+
+    public void TriggerPause()
+    {
+        if (!timeStopped)
+        {
+            Time.timeScale = 0;
+        }
+        pauseCanvas.SetActive(!pauseCanvas.activeSelf);
+        timeStopped = !timeStopped;
     }
     IEnumerator attack()
     {

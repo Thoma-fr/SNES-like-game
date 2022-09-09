@@ -20,18 +20,11 @@ public class PauseCanvasManager : MonoBehaviour
     private FilmGrain filmGrain;
 
     private bool FXSwitch = true;
+    private bool timeStopped = false;
 
     private void Start()
     {
         volume = globalVolume.GetComponent<Volume>();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            pauseCanvas.SetActive(!pauseCanvas.activeSelf);
-        }
     }
 
     public void Resume()

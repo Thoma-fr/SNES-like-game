@@ -220,6 +220,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49aee813f56b0e94c9d268769a7314d6, type: 3}
+--- !u!1 &583794400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2369506222652861106, guid: ebf134c1716b95c4bbd8a0c29d875dae, type: 3}
+  m_PrefabInstance: {fileID: 1067580921}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &633296820
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +287,10 @@ PrefabInstance:
       propertyPath: goldenRock
       value: 
       objectReference: {fileID: -312889356, guid: 0886ca3ec9d6c3e4c823c0dcdbaf5a41, type: 3}
+    - target: {fileID: 4241038941872002680, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 583794400}
     - target: {fileID: 4241038941872002680, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -551,7 +560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084777128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.64, y: -4.49, z: -2.1}
+  m_LocalPosition: {x: 9.64, y: -4.49, z: 0}
   m_LocalScale: {x: 46.112, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
