@@ -409,6 +409,9 @@ MonoBehaviour:
   _vignette_speed: 2
   _vignette_max: 0.25
   time_light: 0.1
+  floatHeight: 3
+  liftForce: 1
+  damping: 5
   simple:
   - {fileID: -595640113, guid: aed132d5d970d5146b36cf61c36dcafc, type: 3}
   - {fileID: 21993079, guid: aed132d5d970d5146b36cf61c36dcafc, type: 3}
