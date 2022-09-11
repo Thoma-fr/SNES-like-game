@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
@@ -185,13 +187,23 @@ public class PlayerMovement : MonoBehaviour
         int layerMask = 1 << LayerMask.NameToLayer("Collider");
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,floatHeight, layerMask);
         Debug.DrawLine(transform.position, transform.position + Vector3.down * floatHeight, Color.red);
-        Debug.Log(hit.transform.name);
-        Debug.Log(hit.transform.tag);
+
+        Debug.Log(hit.point);
+        Debug.Log(transform.position.y- hit.point.y );
+        if(transform.position.y - hit.point.y >5)
+        {
+            _rb.gravityScale = 20;
+        }
+        else if (transform.position.y - hit.point.y <2)
+        {
+            _rb.gravityScale = 1;
+        }
+            if (hit)
         if (hit.transform.CompareTag("ground"))
         {
             
             canMove = true;
-            _rb.gravityScale = 1;
+            //_rb.gravityScale = 1;
         }
         else if (hit.collider==null)
         {
@@ -200,7 +212,7 @@ public class PlayerMovement : MonoBehaviour
             _rb.AddForce(new Vector2(0, -gravity));
             canMove = false;
             _action = false;
-            _rb.gravityScale = 2000;
+            //_rb.gravityScale = 2000;
         }
         //transform.localRotation = Quaternion.Euler(0, 0, Mathf.Clamp(transform.localRotation.eulerAngles.z, -30, 30));
 
