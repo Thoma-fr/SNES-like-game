@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - ObstacleDestroyTrigger
   - GoldenNugget
+  - ground
   layers:
   - Default
   - TransparentFX

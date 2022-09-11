@@ -5043,6 +5043,10 @@ PrefabInstance:
       propertyPath: _maxSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 509569275, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+      propertyPath: floatHeight
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 519420031, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
       propertyPath: orthographic
       value: 1
@@ -5050,6 +5054,10 @@ PrefabInstance:
     - target: {fileID: 519420031, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
       propertyPath: field of view
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 519420031, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
+      propertyPath: orthographic size
+      value: 8.33
       objectReference: {fileID: 0}
     - target: {fileID: 4241038941872002680, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
       propertyPath: rock
@@ -5077,7 +5085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654999222389303508, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.89
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 5654999222389303508, guid: d170da4d00eda134f848f2d84351d2f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5533,6 +5541,10 @@ PrefabInstance:
     - target: {fileID: 4813107540351875006, guid: 34f4a064096995948988f27517d61285, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813107540351875006, guid: 34f4a064096995948988f27517d61285, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1495.6892
       objectReference: {fileID: 0}
     - target: {fileID: 4813107540351875006, guid: 34f4a064096995948988f27517d61285, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6160,9 +6172,9 @@ GameObject:
   - component: {fileID: 980043497}
   - component: {fileID: 980043496}
   - component: {fileID: 980043495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider 2
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15103,9 +15115,9 @@ GameObject:
   - component: {fileID: 2014168560}
   - component: {fileID: 2014168559}
   - component: {fileID: 2014168558}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Collider 1
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

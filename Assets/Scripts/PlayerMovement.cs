@@ -186,17 +186,21 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down,floatHeight, layerMask);
         Debug.DrawLine(transform.position, transform.position + Vector3.down * floatHeight, Color.red);
         Debug.Log(hit.transform.name);
-        if (hit.collider == null)
+        Debug.Log(hit.transform.tag);
+        if (hit.transform.CompareTag("ground"))
         {
+            
+            canMove = true;
+            _rb.gravityScale = 1;
+        }
+        else if (hit.collider==null)
+        {
+
+            Debug.Log("touche pas le sol");
             _rb.AddForce(new Vector2(0, -gravity));
             canMove = false;
             _action = false;
             _rb.gravityScale = 2000;
-        }
-        else
-        {
-            canMove = true;
-            _rb.gravityScale = 1;
         }
         //transform.localRotation = Quaternion.Euler(0, 0, Mathf.Clamp(transform.localRotation.eulerAngles.z, -30, 30));
 
